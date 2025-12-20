@@ -3,6 +3,7 @@ module github.com/PeepoFrog/sekai_manager
 go 1.24.0
 
 require (
+	github.com/KiraCore/tools/validator-key-gen v0.0.0-20240502110212-fd9aae04a1a7
 	github.com/blakesmith/ar v0.0.0-20190502131153-809d4375e1fb
 	github.com/klauspost/compress v1.18.0
 	github.com/pelletier/go-toml/v2 v2.2.4
@@ -12,7 +13,6 @@ require (
 
 require (
 	github.com/DataDog/zstd v1.4.5 // indirect
-	github.com/KiraCore/tools/validator-key-gen v0.0.0-20240502110212-fd9aae04a1a7 // indirect
 	github.com/armon/go-metrics v0.3.10 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/btcsuite/btcd v0.22.0-beta // indirect
@@ -77,4 +77,5 @@ require (
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
 
-replace github.com/gogo/protobuf v1.3.3 => github.com/gogo/protobuf v1.3.2
+// replace github.com/gogo/protobuf v1.3.3 => github.com/gogo/protobuf v1.3.2
+replace github.com/gogo/protobuf => github.com/regen-network/protobuf v1.3.3-alpha.regen.1
