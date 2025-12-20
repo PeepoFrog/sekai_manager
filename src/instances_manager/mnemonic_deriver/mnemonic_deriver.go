@@ -82,12 +82,11 @@ func DeliverMnemonicKeysFromMaster(masterMnemonic, prefix, path, outFolder strin
 	//     PrivKeyMnemonic       []byte
 
 	stringset := fmt.Sprintf(`
-		valAddrMnemonic=%s
-		valValMnemonic=%s
-		signerAddrMnemonic=%s
-		valNodeMnemonic=%s
-		valNodeID=%s
-	`, (set.ValidatorAddrMnemonic), set.ValidatorValMnemonic, set.SignerAddrMnemonic, set.ValidatorNodeMnemonic, set.ValidatorNodeId)
+valAddrMnemonic=%s
+valValMnemonic=%s
+signerAddrMnemonic=%s
+valNodeMnemonic=%s
+valNodeID=%s`, (set.ValidatorAddrMnemonic), set.ValidatorValMnemonic, set.SignerAddrMnemonic, set.ValidatorNodeMnemonic, set.ValidatorNodeId)
 	setFile := filepath.Join(outFolder, "masterSet.txt")
 	err = os.WriteFile(setFile, []byte(stringset), 0600)
 	return nil
